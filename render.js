@@ -17,20 +17,21 @@ var render = function(chartNumber) {
     var width = svgWidth - margin.left - margin.right;
     var height = svgHeight - margin.top - margin.bottom;
 
-    var csvName = "minwage_crime.csv"
-    var xAxisString = "minimum_wage_2018"
-    var yAxisString = "total_crime_per_100K_pop"
-    var xAxisLabel = "state minimum wage for 2018 in US Dollars"
-    var yAxisLabel = "state total crime per 100k people"
-    var chartTitle = "Total crime per 100k people VS state minimum wage "
+
 
     switch(chartNumber)
     {
-        case(1):
+        case(3):
+            var csvName = "minwage_crime.csv"
+            var xAxisString = "minimum_wage_2018"
+            var yAxisString = "total_crime_per_100K_pop"
+            var xAxisLabel = "state minimum wage for 2018 in US Dollars"
+            var yAxisLabel = "state total crime per 100k people"
+            var chartTitle = "Total crime per 100k people VS state minimum wage "
 
 
                 break
-        case(2):
+        case(1):
              csvName = "minwage_poverty.csv"
              xAxisString = "minimum_wage_2018"
              yAxisString = "poverty_rate_2017"
@@ -38,7 +39,7 @@ var render = function(chartNumber) {
              yAxisLabel = "poverty rate in 2017"
              chartTitle = "Percentage living in Poverty VS state minimum wage "
             break
-        case(3):
+        case(2):
             csvName = "minwage_unemployment.csv"
             xAxisString = "minimum_wage_2018"
             yAxisString = "percentage_of_labor_force_unemployed_2019"
@@ -46,22 +47,56 @@ var render = function(chartNumber) {
             yAxisLabel = "labor force unemployed % in 2017"
             chartTitle = "Percentage of labor force Unemployed VS state minimum wage "
             break
-        case(4):
+        case(6):
             csvName = "unionism_crime.csv"
             xAxisString = "union_representation_percent_2018"
             yAxisString = "total_crime_per_100K_pop"
             xAxisLabel = "percentage of labor union represented"
             yAxisLabel = "crime per 100k of population"
-            chartTitle = "Union representation VS crime rate "
+            chartTitle = "crime rate VS Union representation "
             break
-        case(5):
+        case(4):
             csvName = "unionism_poverty.csv"
             xAxisString = "union_representation_percent_2018"
             yAxisString = "poverty_rate_2017"
             xAxisLabel = "percentage of labor union represented"
             yAxisLabel = "poverty rate in 2017"
-            chartTitle = "Union representation VS poverty level "
+            chartTitle = " poverty level VS Union representation "
             break
+        case(5):
+            csvName = "unionism_unemployment.csv"
+            xAxisString = "union_representation_percent_2018"
+            yAxisString = "percentage_of_labor_force_unemployed_2019"
+            xAxisLabel = "percentage of labor union represented"
+            yAxisLabel = "labor force unemployed % in 2017"
+            chartTitle = " Unemployment VS Union representation "
+            break
+        case(9):
+            csvName = "welfare_crime.csv"
+            xAxisString = "weekly_welfare_dollars_2020"
+            yAxisString = "total_crime_per_100k_pop"
+            xAxisLabel = "weekly welfare payment in 2020"
+            yAxisLabel = "crime rate per 100k population"
+            chartTitle = " Crime Rate VS Welfare level "
+            break
+        case(7):
+            csvName = "welfare_poverty.csv"
+            xAxisString = "weekly_welfare_dollars_2020"
+            yAxisString = "poverty_rate_2017"
+            xAxisLabel = "weekly welfare payment in 2020"
+            yAxisLabel = "2017 poverty rate "
+            chartTitle = "poverty rate  VS Welfare level   "
+            break
+        case(8):
+            csvName = "welfare_unemployment.csv"
+            xAxisString = "weekly_welfare_dollars_2020"
+            yAxisString = "percentage_of_labor_force_unemployed_2019"
+            xAxisLabel = "weekly welfare payment in 2020"
+            yAxisLabel = "% labor force unemployed 2019 "
+            chartTitle = " poverty rate VS Welfare level "
+            break
+
+
 
     }
 
